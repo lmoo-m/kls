@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>XII TKJ 4</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/tw-elements.min.css"
+    />
+    <style>
+      * {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background: #191717;
+      }
+
+      .start {
+        background: url("./images/1.jpeg") no-repeat center;
+        width: 100%;
+      }
+      .start::after {
+        content: "";
+        display: block;
+        position: absolute;
+        height: 100vh;
+        bottom: 0;
+        z-index: 0;
+        width: 100%;
+        background: linear-gradient(to top, #191717 2%, #19171756, #19171700);
+      }
+
+      section {
+        overflow-x: hidden;
+      }
+
+      @keyframes image {
+        0% {
+          transform: scale(0.8);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      @keyframes slide {
+        0% {
+          transform: translateX(0);
+        }
+        25% {
+          transform: translateX(0);
+        }
+        30% {
+          transform: translateX(-100%);
+        }
+        50% {
+          transform: translateX(-100%);
+        }
+        55% {
+          transform: translateX(-200%);
+        }
+        75% {
+          transform: translateX(-200%);
+        }
+        80% {
+          transform: translateX(-300%);
+        }
+        100% {
+          transform: translateX(-300%);
+        }
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body class="text-white">
+    <nav
+      class="flex justify-center items-center pt-3 px-5 fixed top-0 w-[100vw] z-50"
+      style="backdrop-filter: blur(2px)"
+    >
+      <section
+        class="flex justify-between border-b border-b-2 pb-2 w-full px-3"
+      >
+        <a class="md:text-3xl text-xl font-bold" href="#">XII TKJ 4</a>
+        <div class="gap-7 items-center text-lg hidden md:flex">
+          <a class="cursor-pointer hover:text-red-500" href="#contact">
+            Contact</a
+          >
+          <a class="cursor-pointer hover:text-red-500" href="#galery">Galery</a>
+          <a class="cursor-pointer hover:text-red-500" href="#aboutUs"
+            >About Us</a
+          >
+        </div>
+      </section>
+    </nav>
+
+    <section class="start relative bg-cover" id="#">
+      <div class="flex justify-center items-center h-screen flex-col">
+        <h1
+          class="md:text-7xl text-3xl font-bold drop-shadow-lg shawdow-white z-10"
+          data-aos="fade-up"
+        >
+          XII TKJ 4
+        </h1>
+        <p
+          class="text-xl z-10 font-thin mb-10"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
+          Culture
+        </p>
+      </div>
+    </section>
+
+    <section class="" id="contact">
+      <div class="h-screen flex justify-center items-center flex-col gap-5">
+        <h1 class="text-5xl mb-5" data-aos="fade-up">Contact</h1>
+        <div class="flex gap-3 items-center">
+          <a
+            data-aos="fade-right"
+            class="text-3xl border rounded-md md:py-5 md:px-5 p-3 shadow-md shadow-white flex flex-col h-[20rem] justify-center hover:shadow-blue-500 hover:shadow-lg transition hover:border-blue-500"
+            href="https://www.instagram.com/12tekaje_4you/"
+            target="_blank"
+          >
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+            Instagram</a
+          >
+          <div class="h-full flex flex-col gap-3">
+            <a
+              data-aos="fade-left"
+              class="text-3xl border rounded-md py-5 px-2 h-1/2 md:w-[20rem] w-[10rem] shadow-md shadow-white flex flex-col justify-center hover:shadow-blue-500 hover:shadow-lg transition hover:border-blue-500"
+              >Twiter</a
+            >
+            <a
+              data-aos="fade-left"
+              class="text-3xl border rounded-md py-5 px-2 h-1/2 md:w-[20rem] w-[10rem] shadow-md shadow-white flex flex-col justify-center hover:shadow-blue-500 hover:shadow-lg transition hover:border-blue-500"
+              >Twiter</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="galery">
+      <div class="h-screen flex flex-col justify-center items-center gap-5">
+        <h1 class="text-5xl mb-5" data-aos="fade-up">Galery</h1>
+
+        <div class="md:w-1/2 px-2" data-aos="zoom-in">
+          <div
+            id="carouselExampleIndicators"
+            class="relative"
+            data-te-carousel-init
+            data-te-ride="carousel"
+          >
+            <!--Carousel indicators-->
+            <div
+              class="absolute bottom-0 left-0 right-0 z-[2] mx-[15%] mb-4 flex list-none justify-center p-0"
+              data-te-carousel-indicators
+            >
+              <button
+                type="button"
+                data-te-target="#carouselExampleIndicators"
+                data-te-slide-to="0"
+                data-te-carousel-active
+                class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-te-target="#carouselExampleIndicators"
+                data-te-slide-to="1"
+                class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+                aria-label="Slide 2"
+              ></button>
+              <button
+                type="button"
+                data-te-target="#carouselExampleIndicators"
+                data-te-slide-to="2"
+                class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+                aria-label="Slide 3"
+              ></button>
+              <button
+                type="button"
+                data-te-target="#carouselExampleIndicators"
+                data-te-slide-to="3"
+                class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+                aria-label="Slide 4"
+              ></button>
+              <button
+                type="button"
+                data-te-target="#carouselExampleIndicators"
+                data-te-slide-to="4"
+                class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+                aria-label="Slide 5"
+              ></button>
+            </div>
+
+            <!--Carousel items-->
+            <div
+              class="relative rounded-md w-full overflow-hidden after:clear-both after:block after:content-['']"
+            >
+              <div
+                class="relative float-left -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+                data-te-carousel-item
+                data-te-carousel-active
+              >
+                <img
+                  src="./images/1.jpeg"
+                  class="block w-full"
+                  alt="Wild Landscape"
+                />
+              </div>
+
+              <div
+                class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+                data-te-carousel-item
+              >
+                <img src="./images/2.jpeg" class="block w-full" alt="Camera" />
+              </div>
+
+              <div
+                class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+                data-te-carousel-item
+              >
+                <img src="./images/4.jpeg" class="block w-full" alt="test" />
+              </div>
+
+              <div
+                class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+                data-te-carousel-item
+              >
+                <img
+                  src="./images/3.jpeg"
+                  class="block w-full"
+                  alt="Exotic Fruits"
+                />
+              </div>
+
+              <div
+                class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+                data-te-carousel-item
+              >
+                <img
+                  src="./images/5.jpeg"
+                  class="block w-full"
+                  alt="Exotic Fruits"
+                />
+              </div>
+            </div>
+          </div>
+
+          <button
+            class="absolute bottom-0 left-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+            type="button"
+            data-te-target="#carouselExampleIndicators"
+            data-te-slide="prev"
+          >
+            <span class="inline-block h-8 w-8">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="h-6 w-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15.75 19.5L8.25 12l7.5-7.5"
+                />
+              </svg>
+            </span>
+            <span
+              class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+              >Previous</span
+            >
+          </button>
+
+          <button
+            class="absolute bottom-0 right-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+            type="button"
+            data-te-target="#carouselExampleIndicators"
+            data-te-slide="next"
+          >
+            <span class="inline-block h-8 w-8">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="h-6 w-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                />
+              </svg>
+            </span>
+            <span
+              class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+              >Next</span
+            >
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="aboutUs">
+      <div class="h-[160vh] pb-5 flex items-center flex-col">
+        <h1 class="text-5xl mb-5 mt-[5rem]" data-aos="fade-up">About Us</h1>
+        <p class="text-3xl" data-aos="fade-up" data-aos-delay="500">
+          <button onclick="showComponent('struktur')">Structur</button>
+          &
+          <button onclick="showComponent('schedule')">Schedule</button>
+        </p>
+
+        <!-- struktur -->
+        <div class="mt-5 text-lg" id="struktur">
+          <p
+            data-aos="fade-up"
+            class="border-b text-center relative before:block before:w-[1px] before:h-[36rem] before:absolute before:-bottom-[38.8rem] before:mb-2 before:left-1/2 before:bg-white after:block after:absolute after:-bottom-7 after:w-full after:text-center after:text-sm after:content-['Wali_Kelas']"
+          >
+            Irwan Rosadi
+          </p>
+
+          <div
+            class="md:w-[20rem] w-[70%] md:left-0 left-8 h-[1px] bg-white relative top-[4.4rem] after:block after:h-10 after:w-[1px] after:bg-white after:absolute after:right-0 after:top-0 before:block before:h-10 before:w-[1px] before:bg-white"
+          >
+            <div class="flex justify-between">
+              <div data-aos="flip-up">
+                <p
+                  class="border-b w-[5rem] -translate-x-10 text-center relative after:block after:absolute after:-bottom-7 after:w-full after:text-center after:text-sm after:content-['Ketua_Kelas']"
+                >
+                  Fikri
+                </p>
+              </div>
+              <div data-aos="flip-up">
+                <p
+                  class="border-b w-[5rem] translate-x-10 text-center relative after:block after:absolute after:-bottom-7 after:w-full after:text-center after:text-sm after:content-['Wakil_Ketua']"
+                >
+                  Tegar
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="md:w-[20rem] w-[70%] md:left-0 left-8 h-[1px] bg-white relative top-[12rem] after:block after:h-10 after:w-[1px] after:bg-white after:absolute after:right-0 after:top-0 before:block before:h-10 before:w-[1px] before:bg-white"
+          >
+            <div class="flex justify-between">
+              <div>
+                <div data-aos="flip-up">
+                  <p
+                    class="border-b w-[5rem] -translate-x-10 text-center relative after:block after:absolute after:-bottom-7 after:w-full after:text-center after:text-sm after:content-['Sekretaris_1']"
+                  >
+                    Lulu
+                  </p>
+                </div>
+                <div data-aos="flip-up">
+                  <p
+                    class="border-b w-[5rem] top-[3rem] -translate-x-10 text-center relative after:block after:absolute after:-bottom-7 after:w-full after:text-center after:text-sm after:content-['Sekretaris_2']"
+                  >
+                    Riski
+                  </p>
+                </div>
+              </div>
+              <div>
+                <div data-aos="flip-up">
+                  <p
+                    class="border-b w-[5rem] translate-x-10 text-center relative after:block after:absolute after:-bottom-7 after:w-full after:text-center after:text-sm after:content-['Bendahara_1']"
+                  >
+                    Salsa
+                  </p>
+                </div>
+                <div data-aos="flip-up">
+                  <p
+                    class="border-b w-[5rem] top-[3rem] translate-x-10 text-center relative after:block after:absolute after:-bottom-7 after:w-full after:text-center after:text-sm after:content-['Bendahara_2']"
+                  >
+                    Adi
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="md:w-[20rem] w-[70%] md:left-0 left-8 h-[1px] bg-white relative top-[25rem] after:block after:h-10 after:w-[1px] after:bg-white after:absolute after:right-0 after:top-0 before:block before:h-10 before:w-[1px] before:bg-white"
+          >
+            <div class="flex justify-between">
+              <div>
+                <div data-aos="flip-up">
+                  <p
+                    class="border-b w-[5rem] -translate-x-10 text-center relative after:block after:absolute after:-bottom-7 after:w-full after:text-center after:text-sm after:content-['Humas_1']"
+                  >
+                    Putra
+                  </p>
+                </div>
+                <div data-aos="flip-up">
+                  <p
+                    class="border-b w-[5rem] top-[3rem] -translate-x-10 text-center relative after:block after:absolute after:-bottom-7 after:w-full after:text-center after:text-sm after:content-['Humas_2']"
+                  >
+                    Dwi
+                  </p>
+                </div>
+              </div>
+              <div>
+                <div data-aos="flip-up">
+                  <p
+                    class="border-b w-[5rem] translate-x-10 text-center relative after:block after:absolute after:-bottom-7 after:w-full after:text-center after:text-sm after:content-['Absensi']"
+                  >
+                    Raveena
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="md:w-[20rem] w-[70%] md:left-0 left-8 h-[1px] bg-white relative top-[38rem] after:block after:h-10 after:w-[32%] after:border-x after:absolute after:right-0 after:top-0 before:block before:h-10 before:w-[35%] before:border-x"
+          >
+            <div class="flex gap-5">
+              <div data-aos="flip-up">
+                <p
+                  class="border-b md:w-[5rem] -translate-x-10 text-center relative after:block after:absolute after:-bottom-7 after:w-full after:text-center after:text-sm after:content-['Kebersihan']"
+                >
+                  Anah
+                </p>
+              </div>
+
+              <div data-aos="flip-up">
+                <p
+                  class="border-b md:w-[5rem] -translate-x-7 text-center relative after:block after:absolute after:-bottom-7 after:w-full after:text-center after:text-sm after:content-['Kebersihan']"
+                >
+                  Puji
+                </p>
+              </div>
+
+              <div data-aos="flip-up">
+                <p
+                  class="border-b md:w-[5rem] -translate-x-5 text-center relative after:block after:absolute after:-bottom-7 after:w-full after:text-center after:text-sm after:content-['Kebersihan']"
+                >
+                  Sutiyo
+                </p>
+              </div>
+
+              <div data-aos="flip-up">
+                <p
+                  class="border-b md:w-[5rem] -translate-x-5 text-center relative after:block after:absolute after:-bottom-7 after:w-full after:text-center after:text-sm after:content-['Kebersihan']"
+                >
+                  Aufa
+                </p>
+              </div>
+            </div>
+          </div>
+          <!--  -->
+        </div>
+        <!-- struktur -->
+        <div
+          id="schedule"
+          class="mt-5 w-full flex flex-col justify-center"
+          data-aos="fade-up"
+        >
+          <h1 class="text-lg text-center mb-3">Jadwal Pelajaran</h1>
+          <table class="table-auto md:w-[50%] border m-auto">
+            <thead>
+              <tr>
+                <th class="border">Hari</th>
+                <th class="border">No</th>
+                <th class="border">Pelajaran</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="border-x">Senin</td>
+                <td class="border">1</td>
+                <td class="border">AIJ, TLJ, ASJ</td>
+              </tr>
+              <tr>
+                <td class="border-b"></td>
+                <td class="border">2</td>
+                <td class="border">Agama, BK, PKKWU, MTK</td>
+              </tr>
+              <tr>
+                <td class="border-x">Selasa</td>
+                <td class="border">1</td>
+                <td class="border">ASJ, TLJ, AIJ</td>
+              </tr>
+              <tr>
+                <td class="border-b"></td>
+                <td class="border">2</td>
+                <td class="border">MTK, PKKWU, Agama</td>
+              </tr>
+              <tr>
+                <td class="border-x">Rabu</td>
+                <td class="border">1</td>
+                <td class="border">TLJ, AIJ, ASJ</td>
+              </tr>
+              <tr>
+                <td class="border-b"></td>
+                <td class="border">2</td>
+                <td class="border">Inggris, Indo, Jepang, Jawa</td>
+              </tr>
+              <tr>
+                <td class="border-x">Kamis</td>
+                <td class="border">1</td>
+                <td class="border">AIJ, TLJ</td>
+              </tr>
+              <tr>
+                <td class="border-b"></td>
+                <td class="border">2</td>
+                <td class="border">Indo, PKN, Inggris, Jawa</td>
+              </tr>
+              <tr>
+                <td class="border-x">Jum'at</td>
+                <td class="border">1</td>
+                <td class="border">TLJ, ASJ, AIJ</td>
+              </tr>
+              <tr>
+                <td class="border-b"></td>
+                <td class="border">2</td>
+                <td class="border">PKKWU</td>
+              </tr>
+            </tbody>
+          </table>
+          <!--  -->
+          <h1 class="text-lg text-center mb-3 mt-5">Jadwal Piket</h1>
+          <table class="table-auto md:w-[50%] border m-auto">
+            <thead>
+              <tr>
+                <th class="border">Hari</th>
+                <th class="border">Nama</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="border">Senin</td>
+                <td class="border">
+                  Adi, Aufa, Riski, Aisah, Fani, Lulu, Sefa
+                </td>
+              </tr>
+              <tr>
+                <td class="border">Selasa</td>
+                <td class="border">
+                  Angger, Fikri, Iki, Arin, Uzi, Aya, Raveena
+                </td>
+              </tr>
+              <tr>
+                <td class="border">Rabu</td>
+                <td class="border">Diky, Hakam, Sae, Depi, Hani, Anah, Amel</td>
+              </tr>
+              <tr>
+                <td class="border">Kamis</td>
+                <td class="border">
+                  Hafiz, Anto, Sutiyo, Lia, Indri, Puji, Salsa
+                </td>
+              </tr>
+              <tr>
+                <td class="border">Jum'at</td>
+                <td class="border">
+                  Fais, Putra, Tegar, Dwi, Febri, Nabila, Yanu
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <div id="tsparticles"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles-engine"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles-preset-bubbles@2/tsparticles.preset.bubbles.bundle.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/tsparticles-preset-big-circles@2/tsparticles.preset.bigCircles.bundle.min.js"></script> -->
+
+    <script>
+      AOS.init();
+
+      const struktur = document.getElementById("struktur");
+      const schedule = document.getElementById("schedule");
+
+      schedule.style.display = "none";
+
+      const showComponent = (component) => {
+        component === "struktur"
+          ? (struktur.style.display = "block")
+          : (struktur.style.display = "none");
+
+        component === "schedule"
+          ? (schedule.style.display = "block")
+          : (schedule.style.display = "none");
+      };
+
+      (async () => {
+        await loadBubblesPreset(tsParticles); // this is required only if you are not using the bundle script
+
+        await tsParticles.load("tsparticles", {
+          preset: "bigCircles", // also "big-circles" is accepted
+        });
+      })();
+    </script>
+  </body>
+</html>
