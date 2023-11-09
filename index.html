@@ -113,7 +113,7 @@
           data-aos="fade-up"
           data-aos-delay="300"
         >
-          Culture
+          SMEANSAWI
         </p>
       </div>
     </section>
@@ -319,9 +319,13 @@
       <div class="h-[160vh] pb-5 flex items-center flex-col">
         <h1 class="text-5xl mb-5 mt-[5rem]" data-aos="fade-up">About Us</h1>
         <p class="text-3xl" data-aos="fade-up" data-aos-delay="500">
-          <button onclick="showComponent('struktur')">Structur</button>
+          <button onclick="showComponent('struktur')" id="btnStruktur">
+            Structur
+          </button>
           &
-          <button onclick="showComponent('schedule')">Schedule</button>
+          <button onclick="showComponent('schedule')" id="btnSchedule">
+            Schedule
+          </button>
         </p>
 
         <!-- struktur -->
@@ -426,12 +430,12 @@
           </div>
 
           <div
-            class="md:w-[20rem] w-[70%] md:left-0 left-8 h-[1px] bg-white relative top-[38rem] after:block after:h-10 after:w-[32%] after:border-x after:absolute after:right-0 after:top-0 before:block before:h-10 before:w-[35%] before:border-x"
+            class="md:w-[20rem] w-[100%] md:left-0 left-2 h-[1px] bg-white relative top-[38rem] after:block after:h-10 after:w-[32%] after:border-x after:absolute after:right-0 after:top-0 before:block before:h-10 before:w-[35%] before:border-x"
           >
-            <div class="flex gap-5">
+            <div class="flex md:gap-5 gap-5 text-center">
               <div data-aos="flip-up">
                 <p
-                  class="border-b md:w-[5rem] -translate-x-10 text-center relative after:block after:absolute after:-bottom-7 after:w-full after:text-center after:text-sm after:content-['Kebersihan']"
+                  class="border-b md:w-[5rem] md:-translate-x-10 -translate-x-[1.3rem] text-center relative after:block after:absolute after:-bottom-7 after:w-full after:text-center after:text-sm after:content-['Kebersihan'] after:font-thin"
                 >
                   Anah
                 </p>
@@ -439,7 +443,7 @@
 
               <div data-aos="flip-up">
                 <p
-                  class="border-b md:w-[5rem] -translate-x-7 text-center relative after:block after:absolute after:-bottom-7 after:w-full after:text-center after:text-sm after:content-['Kebersihan']"
+                  class="border-b md:w-[5rem] md:-translate-x-7 -translate-x-[.5rem] text-center relative after:block after:absolute after:-bottom-7 after:w-full after:text-center after:text-sm after:content-['Kebersihan'] after:font-thin"
                 >
                   Puji
                 </p>
@@ -447,7 +451,7 @@
 
               <div data-aos="flip-up">
                 <p
-                  class="border-b md:w-[5rem] -translate-x-5 text-center relative after:block after:absolute after:-bottom-7 after:w-full after:text-center after:text-sm after:content-['Kebersihan']"
+                  class="border-b md:w-[5rem] md:-translate-x-5 translate-x-[1rem] text-center relative after:block after:absolute after:-bottom-7 after:w-full after:text-center after:text-sm after:content-['Kebersihan'] after:font-thin"
                 >
                   Sutiyo
                 </p>
@@ -455,7 +459,7 @@
 
               <div data-aos="flip-up">
                 <p
-                  class="border-b md:w-[5rem] -translate-x-5 text-center relative after:block after:absolute after:-bottom-7 after:w-full after:text-center after:text-sm after:content-['Kebersihan']"
+                  class="border-b md:w-[5rem] md:-translate-x-5 translate-x-[1.3rem] text-center relative after:block after:absolute after:-bottom-7 after:w-full after:text-center after:text-sm after:content-['Kebersihan'] after:font-thin"
                 >
                   Aufa
                 </p>
@@ -589,17 +593,26 @@
 
       const struktur = document.getElementById("struktur");
       const schedule = document.getElementById("schedule");
+      const btnStruktur = document.getElementById("btnStruktur");
+      const btnSchedule = document.getElementById("btnSchedule");
 
       schedule.style.display = "none";
+      btnStruktur.style.borderBottom = "1px solid white";
 
       const showComponent = (component) => {
-        component === "struktur"
-          ? (struktur.style.display = "block")
-          : (struktur.style.display = "none");
+        if (component === "struktur") {
+          schedule.style.display = "none";
+          struktur.style.display = "block";
 
-        component === "schedule"
-          ? (schedule.style.display = "block")
-          : (schedule.style.display = "none");
+          btnSchedule.style.borderBottom = "";
+          btnStruktur.style.borderBottom = "1px solid white";
+        } else if (component === "schedule") {
+          struktur.style.display = "none";
+          schedule.style.display = "block";
+
+          btnStruktur.style.borderBottom = "";
+          btnSchedule.style.borderBottom = "1px solid white";
+        }
       };
 
       (async () => {
