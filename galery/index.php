@@ -46,20 +46,20 @@ $query = mysqli_query($db, "select * from images");
                 </div>
             </div>
             <!-- galery -->
-            <div class="flex flex-wrap md:px-[3rem] px-[1rem] py-5 gap-5 mt-5">
+            <div class="flex flex-col items-center md:px-[3rem] px-[1rem] py-5 gap-5 mt-5">
                 <?php
                 while ($row = mysqli_fetch_array($query)) {
                 ?>
-                    <div class="bg-white w-[25rem] text-black p-2 rounded-md shadow-sm shadow-white" data-aos="fade-up">
-                        <img src='<?php echo "../images/" . $row['image']; ?>' alt="pp" class="rounded-md max-h-[13rem] w-full ration-16/9" />
-                        <div class='flex justify-between items-center'>
-                            <h1 class="text-lg mt-2 font-semibold break-all">
-                                <?= $row['title']; ?>
-                            </h1>
-                            <h2 class='text-sm'>
-                                <?= $row['time']; ?>
-                            </h2>
-                        </div>
+                    <div class="bg-white md:w-[50%] w-[100%] text-black p-2 rounded-md shadow-sm shadow-white" data-aos="fade-up">
+                        <img src='<?php echo "../images/" . $row['image']; ?>' alt="pp" class="rounded-md  w-full ration-16/9" />
+
+                        <h1 class="text-lg mt-2 font-semibold break-all">
+                            <?= $row['title']; ?>
+                        </h1>
+                        <h2 class='text-sm text-end'>
+                            <?= $row['time']; ?>
+                        </h2>
+
                     </div>
                 <?php
                 }

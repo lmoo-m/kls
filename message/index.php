@@ -43,7 +43,7 @@ $query = mysqli_query($db, "select * from message");
                 </div>
             </div>
             <!-- galery -->
-            <div class="flex flex-wrap md:px-[3rem] px-[1rem] py-5 gap-5 mt-5">
+            <div class="flex flex-wrap md:px-[3rem] px-[1rem] py-5 gap-5 mt-5 ">
                 <?php
                 while ($row = mysqli_fetch_array($query)) {
                 ?>
